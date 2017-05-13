@@ -1,2 +1,9 @@
-<h1>Hola mundo</h1>
-<p>Funciona XDDDDDDDDD!</p>
+
+
+<% if user_signed_in? %>
+
+	<h1> Bienvenido <%= current_user.email %></h1>
+
+<%else%>
+	<h1> Bienvenido</h1>
+<%end%>

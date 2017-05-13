@@ -50,7 +50,7 @@ a, a:visited{
 	font-size: 1.2em;
 }
 
-.field{
+.field, .actions{
 	margin-top: 1em;
 }
 
@@ -66,4 +66,8 @@ a, a:visited{
 
 .top-space{
 	margin-top: 1.2em
+}
+
+.text-left{
+	text-align: left;
 }
