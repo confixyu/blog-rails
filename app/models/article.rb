@@ -1,4 +1,5 @@
 class Article < ActiveRecord::Base
+	include PermissionsConcern
 	belongs_to :user
 	has_many :comments
 	has_many :has_categories
