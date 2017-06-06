@@ -28,6 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "devise"
 gem "paperclip"
 gem "aasm"
+gem "will_paginate"
 
 
 # Use ActiveModel has_secure_password

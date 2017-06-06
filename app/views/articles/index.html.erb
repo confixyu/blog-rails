@@ -3,7 +3,9 @@
 	<h1><%= link_to article.title, article %></h1>
 
 	<div>
-		<%= article.body %> - <%= link_to "Eliminar", article, method: :delete, class:"blue" %>
+		<%= article.body %>
 	</div>
 
 <% end %>
+
+<%= will_paginate @articles %>

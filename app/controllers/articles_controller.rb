@@ -3,12 +3,12 @@ class ArticlesController < ApplicationController
 	before_action :authenticate_user!, except: [:show, :index]
 	before_action :set_article, except: [:index, :new, :create]
 	before_action :authenticate_editor!, only: [:new, :create, :update]
-	before_action :authenticate_admin!, only: [:destroy]
+	before_action :authenticate_admin!, only: [:destroy, :publish]
 
 	#GET /articles
 	def index
 		#Obtiene Todos los registro de la tabla
-		@articles = Article.all
+		@articles = Article.paginate(page: params[:page], per_page:5).publicados.ultimos
 	end
 
 	#GET /articles/:id
@@ -60,14 +60,15 @@ class ArticlesController < ApplicationController
 		end
 	end
 
+	def publish
+		@article.publish!
+		redirect_to @article
+	end
+
 	private
 
 	def set_article
 		@article = Article.find(params[:id])
-	end
-
-	def validate_user
-		redirect_to new_user_session_path, notice: "Necesitas iniciar sessión"
 	end
 
 	def article_params
