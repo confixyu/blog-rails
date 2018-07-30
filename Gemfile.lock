@@ -40,6 +40,7 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.4)
     bcrypt (3.1.11)
+    bcrypt (3.1.11-x86-mingw32)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.3)
@@ -88,6 +89,8 @@ GEM
     multi_json (1.12.1)
     nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
+    nokogiri (1.7.2-x86-mingw32)
+      mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
     paperclip (5.1.0)
       activemodel (>= 4.2.0)
@@ -96,6 +99,7 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
     pg (0.20.0)
+    pg (0.20.0-x86-mingw32)
     postgresql (1.0.0)
       pg
     rack (1.6.8)
@@ -170,6 +174,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   aasm
@@ -190,4 +195,4 @@ DEPENDENCIES
   will_paginate
 
 BUNDLED WITH
-   1.11.2
+   1.13.6
